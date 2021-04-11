@@ -624,7 +624,7 @@ public class AdminViewControllerExample {
 //            }
 //        }
 //        box.setItems(temp);
-//        // TODO: 2018/6/28 这里还有一些在选择选项后，值自动清空的bug
+//        // to-do: 2018/6/28 这里还有一些在选择选项后，值自动清空的bug
 //        box.getSelectionModel().clearSelection();
 //    }
 //
@@ -1289,7 +1289,7 @@ public class AdminViewControllerExample {
 //             *==================================================
 //             */
 //            //添加新图片,删除旧图片.
-//            // TODO: 2018/6/30 但是这个问题先放着吧
+//            // TO-DO: 2018/6/30 但是这个问题先放着吧
 //            if (!oldInfo.getCoverPath().equals(newInfo.getCoverPath())){
 //                ImageUtils.save(imageFile);
 //                ImageUtils.delete(oldInfo.getCoverPath());

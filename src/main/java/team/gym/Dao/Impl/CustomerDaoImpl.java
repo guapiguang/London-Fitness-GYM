@@ -5,7 +5,6 @@ import team.gym.Beans.Customer;
 import team.gym.Beans.CustomerWrapper;
 import team.gym.Dao.CustomerDao;
 
-import javax.annotation.PostConstruct;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -13,8 +12,6 @@ import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import java.sql.Wrapper;
-import java.util.HashMap;
 import java.util.Map;
 @Repository
 public class CustomerDaoImpl implements CustomerDao {
@@ -58,7 +55,7 @@ public class CustomerDaoImpl implements CustomerDao {
         try{
             // read the original data and append the new customer information
             Map map = getCustomerMap();
-            map.put(customer.getAccout(),customer);
+            map.put(customer.getAccount(),customer);
             //package the map to wrapper to transmute to XML
             wrapper.setCustomerMap(map);
             saveWrapper(wrapper);

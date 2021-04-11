@@ -12,6 +12,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+/*
+    TODO 客户等级是否使用枚举类，还是简单的使用字符串？
+使用枚举代码有更高的可读性，但是处理可能较复杂  ——课程类型也有同样问题,返回值状态码
+使用枚举拓展性更强，使用字符串易出错
+    TODO course保存方式
+-保存于customer和trainer类中，一个数据需保存两次，空间换时间，但是不易扩展
+-全部保存于一个文件中，xml格式无法检索，只能遍历
+*/
 @Component
 @XmlRootElement(name = "customer")
 public class Customer extends User{
@@ -27,7 +35,7 @@ public class Customer extends User{
 
     public Customer(){
         super();
-        setAccout(String.valueOf(new Random().nextInt(94)));
+        setAccount(String.valueOf(new Random().nextInt(94)));
         setPassword("ipassword");
         setName("iname");
         setGender("it");

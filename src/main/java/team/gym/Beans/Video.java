@@ -5,7 +5,7 @@ import javafx.beans.property.StringProperty;
 
 public class Video {
     private final StringProperty name = new SimpleStringProperty();
-    private final StringProperty classification = new SimpleStringProperty();
+    private final StringProperty type = new SimpleStringProperty();
     private final StringProperty intro = new SimpleStringProperty();
     private final StringProperty trainer = new SimpleStringProperty();
     private final String url = "";
@@ -22,16 +22,16 @@ public class Video {
         this.name.set(name);
     }
 
-    public String getClassification() {
-        return classification.get();
+    public String getType() {
+        return type.get();
     }
 
-    public StringProperty classificationProperty() {
-        return classification;
+    public StringProperty typeProperty() {
+        return type;
     }
 
-    public void setClassification(String classification) {
-        this.classification.set(classification);
+    public void setType(String type) {
+        this.type.set(type);
     }
 
     public String getIntro() {
